@@ -10,7 +10,7 @@ public class PersonTest {
     static Person person;
 
     @BeforeAll
-    public static void setUp() {
+    public static void setup() {
         person = new Person("Paul", "McCartney", new Date(2000), true, false, true);
     }
 
