@@ -3,13 +3,13 @@ package mei.src;
 import java.util.Date;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class PersonTest {
     Person person;
 
-    @BeforeEach
+    @BeforeAll
     public void setUp() {
         person = new Person("Paul", "McCartney", new Date(2000), true, false, true);
     }
