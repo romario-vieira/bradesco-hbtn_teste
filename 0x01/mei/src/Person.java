@@ -1,5 +1,3 @@
-package mei.src;
-
 import java.util.Date;
 
 public class Person {
