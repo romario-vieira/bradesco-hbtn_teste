@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Person {
@@ -38,7 +41,10 @@ public class Person {
 	}
 	
 	public boolean isMEI() {
-		int age = new Date().getYear() - birthDate.getYear();
+		LocalDate birthLocal = birthDate.toInstant()
+                                   .atZone(ZoneId.systemDefault())
+                                   .toLocalDate();
+    	int age = Period.between(birthLocal, LocalDate.now()).getYears();
 		boolean retorno = false;
 		if (this.calculateYearlySalary() < 130000 && age > 18 && !anotherCompanyOwner && !pensioner && !publicServer) {
 			retorno = true;
