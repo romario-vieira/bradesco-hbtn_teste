@@ -7,10 +7,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class PersonTest {
-    Person person;
+    static Person person;
 
     @BeforeAll
-    public void setUp() {
+    public static void setUp() {
         person = new Person("Paul", "McCartney", new Date(2000), true, false, true);
     }
 
