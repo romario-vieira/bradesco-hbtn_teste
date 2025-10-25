@@ -3,10 +3,10 @@ import java.util.Date;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import mei.src.Person;
-
-class PersonTest {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class PersonTest {
     static Person person;
 
     @BeforeAll
