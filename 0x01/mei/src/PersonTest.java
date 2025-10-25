@@ -25,13 +25,13 @@ public class PersonTest {
 
     @Test
     public void person_is_MEI() {
-        person = new Person("Pedro", "José", new Date(2000), false, false, false);
+        Person person2 = new Person("Pedro", "José", new Date(2000), false, false, false);
         Assertions.assertTrue(person.isMEI());
     }
 
     @Test
     public void person_is_not_MEI() {
-        person = new Person("Ana", "Maria", new Date(2000), true, false, false);
+        Person person2 = new Person("Ana", "Maria", new Date(2000), true, false, false);
         Assertions.assertFalse(person.isMEI());
     }
 
