@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import mei.src.Person;
 
-public class PersonTest {
+class PersonTest {
     static Person person;
 
     @BeforeAll
