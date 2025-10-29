@@ -16,7 +16,7 @@ public class PersonTest {
     private static Person person;
 
     @BeforeAll
-    public void setUp() {
+    public void setup() {
         person = new Person();
         assertNotNull(person);
     }
