@@ -1,5 +1,3 @@
-package password;
-
 public class Person {
     public boolean checkUser(String user) {
         String caracteresEspeciais = "!@#$%^&*()-+";
