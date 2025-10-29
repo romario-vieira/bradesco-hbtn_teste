@@ -1,7 +1,17 @@
+package password;
+
 public class Person {
     public boolean checkUser(String user) {
         String caracteresEspeciais = "!@#$%^&*()-+";
-        return user.length() >= 8 && !user.contains(caracteresEspeciais);
+        if (user.length() < 8) return false;
+        
+        // Verifica cada caractere do usuário
+        for (char c : user.toCharArray()) {
+            if (caracteresEspeciais.indexOf(c) >= 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean checkPassword(String password) {
